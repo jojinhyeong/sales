@@ -1,0 +1,96 @@
+@charset "UTF-8";
+/* 테이블 설정 */
+.btn_place {
+	display: inline-block;
+	vertical-align: top;
+	width: 870px;
+	margin-left: 110px;
+}
+
+.home_list {
+	width: 1000px;
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+
+.home_table {
+	font-size: 9pt;
+	width: 100%;
+	border-collapse: collapse;
+	font-family: 돋움;
+}
+
+.home_table tr td {
+	border-bottom: 1px solid #C0C0C0;
+	border-left: 1px solid #C0C0C0;
+	border-right: 1px solid #C0C0C0;
+	height: 30px;
+}
+
+.home_table td:nth-child(1) {
+	background-color: #DCDCDC;
+	width: 190px;
+}
+
+.home_table tr:nth-child(1) {
+	border-top: 2px solid #8B4513;
+}
+
+.home_table tr:nth-child(n+5) {
+	height: 140px;
+}
+
+.home_table tr:nth-child(6) {
+	color: blue;
+}
+
+.home_table tr:nth-child(7) {
+	color: blue;
+}
+
+.home_table tr:nth-child(8) {
+	color: red;
+}
+
+.home_table tr:nth-child(9) {
+	color: red;
+}
+
+.sufont {
+	margin: 3px;
+	font-size: 13pt;
+}
+
+.sumargin {
+	margin-top: 30px;
+}
+/* /////////////////////////////////////////// */
+.home_text {
+	width: 800px;
+}
+
+.home_date {
+	width: 150px;
+}
+
+.home_date {
+	readonly: readonly;
+}
+.search_btn3 {
+	background-color: Grey;
+	border-radius: 3px;
+	color: white;
+	margin: 5px 0px 5px 30px;
+	width:150px;
+}
+
+.search_btn3:hover {
+	background: linear-gradient(to bottom, #634b30 5%, #7d5d3b 100%);
+	background-color: #634b30;
+}
+.main_textarea{
+	border:none;
+}
+
+
+

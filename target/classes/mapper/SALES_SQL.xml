@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="list">
+  <!-- 매출현황 -->
+  <select
+    id="selectData"
+    parameterType="hashmap"
+    resultType="hashmap"
+  >
+   EXEC UP_CZ_SB_APP03 'S1000','C0000',#{date}
+  </select>
+  
+  <!-- 거래처 원장 -->
+  <select
+    id="selectOrder"
+    parameterType="hashmap"
+    resultType="hashmap"
+  >
+   EXEC [UP_CZ_SB01_RPT] '','','','',#{cd_partner},'${date1}01','${date1}31'
+   <!-- EXEC [UP_CZ_SB01_RPT] '','','','','C1415','20210701','20210731' -->
+  </select>
+  
+  <!-- 거래처 목록 -->
+  <select
+    id="selectPartner"
+    parameterType="hashmap"
+    resultType="hashmap"
+  >
+   EXEC UP_CZ_SB_APP01 '2', #{empno}
+  </select>
+  
+   <!-- 연간판매실적  -->
+   <select
+    id="selectYear"
+    parameterType="hashmap"
+    resultType="hashmap"
+  >
+   EXEC UP_CZ_MGR_SALE11_SELECT_01 '', '', 'S1000', 'C0000', #{cd_partner2}, '${year}01', '${year}12', '', '', '', ''
+  </select>
+
+   <!-- 외상잔고실적  -->
+   <select
+    id="selectApp2"
+    parameterType="hashmap"
+    resultType="hashmap"
+  >
+   EXEC UP_CZ_SB_APP02 #{member}, #{date3}
+  </select>
+  
+   <!-- 받을어음현황  -->
+   <select
+    id="selectCash"
+    parameterType="hashmap"
+    resultType="hashmap"
+  >
+   EXEC UP_CZ_PIS_02_RPT_SELECT '','','S1000','${date4}01','${date4}31',#{cd_partner4}
+  </select>
+  
+</mapper>
